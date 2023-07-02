@@ -2,7 +2,7 @@
 
 RootModule = 'ezform.psm1'
 ModuleVersion = '0.0.1.0'
-Author = 'James Church'
+Author = 'archdukejim'
 Description = 'Simplifies Powershell Form Building'
 FunctionsToExport = @("Start-ezform","New-Form","New-Button","New-TextBox","New-Label","New-ListView")
 CmdletsToExport = @("New-Form","New-Button","New-TextBox","New-Label","New-ListView")
