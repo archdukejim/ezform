@@ -123,22 +123,9 @@ function New-ListView{
     }
 }
 
-########### Version 0.1.6.0 - ListViewData CmdLets ###############
+##### Adding Data to Listview #####
 
 <#
-function Clear-ListView{
-    [CmdLetBinding()]
-    param(
-        [parameter(
-                Mandatory=$true,
-                HelpMessage='List View to clear')]
-            $target)
-    BEGIN{}
-    PROCESS{$target.listview.items.clear()}
-    END{$target.refresh()}
-}
-
-
 function Add-ListViewData{
     [CmdLetBinding()]
     param(
