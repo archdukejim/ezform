@@ -95,81 +95,13 @@ function New-Button{
 	}
 }
 
-function Set-Button{
-    [CmdletBinding()]
-    <#
-    .DESCRIPTION
-        Modifies an existing button on a form\
-    .SYNOPSIS
-		Functionality not yet created.  Intent is to allow the user to change any button parameters using the syntax Set-Button -name <ButtonName> <any parameters below>
-    .Parameter name
-        Use to select the existing FormButton
-    .Parameter xlocation
-        Use -xlocation or -x to enter the location on the form
-    .Parameter ylocation
-        Use -ylocation or -y to enter the location on the form
-    .Parameter height
-        Mandatory, Use -height or -h to enter button height in pixels
-    .Parameter width
-        Mandatory, Use -width or -w to enter button width in pixels
-    .Parameter text
-        Use -text to enter text to display on the button
-    .Parameter font
-        Use -font to enter font type, Default: Microsoft Sans Serif
-    .Parameter fontsize
-        Use -fontsize to enter text size, Default: 10
-    .Parameter disable
-        Switch, Use -disable to set the button to disabled
-    .Parameter anchor
-        use -anchor to change alignment positions, default is Left, Top
-        Other options include bottom, right, center
-    .Parameter name
-        Use to define variable name
-    .Example
-        $BUTTON1 = New-Button -height 30 -width 100
-    .Example
-        $BUTTON1 = New-Button -x 30 -y 30 -h 30 -w 100 -text "press this" -anchor "top, right"
-    .Example
-        New-Button -name BUTTON1 -xlocation 30 -ylocation 30 -height 30 -width 100 -text "press this" -anchor bottom, left
-    #>
-    param(
-    )
-    BEGIN{}
-    PROCESS{}
-    END{}
-}
+<#  
+Enables/Disables/Changes are going to be incorporated by adding a scriptmethod on object creation.
 
-function Disable-Button{
-    [CmdletBinding()]
-<#
-    .DESCRIPTION
-        Disables an existing button on a form
-    .SYNOPSIS
-		Functionality not yet created.  Intent is to allow the user to disable a button using the syntax Disable-Button -name <ButtonName>
-	.Parameter name
-        Use to select the existing FormButton
-	
-#>
-    param(
-    )
-    BEGIN{}
-    PROCESS{}
-    END{}
-}
+POSSIBLE
 
-function Enable-Button{
-    [CmdletBinding()]
-<#
-    .DESCRIPTION
-        Enables an existing button on a form
-    .SYNOPSIS
-		Functionality not yet created.  Intent is to allow the user to enable a button using the syntax Enable-Button -name <ButtonName>
-    .Parameter name
-        Use to select the existing FormButton
+.Enable()
+.Disable()
+.<parameter>.Change("New Value")
+
 #>
-    param(
-    )
-    BEGIN{}
-    PROCESS{}
-    END{}
-}
