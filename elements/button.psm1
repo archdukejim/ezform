@@ -69,7 +69,7 @@ function New-Button{
         [string]$anchor
     )
     BEGIN{ 
-		$CmdLetButton = $null }
+		$CmdLetButton = $null
 		if(!$font){      $font									= 'Microsoft Sans Serif'}
         if(!$fontsize){ $fontsize								= 10}
         if(!$anchor){   $anchor									= 'Left, Top'}
@@ -78,6 +78,7 @@ function New-Button{
 		if(!$xlocation){$xlocation								= 0}
 		if(!$ylocation){$ylocation								= 0}
         $CmdLetButton											= New-Object system.Windows.Forms.Button
+        }
     PROCESS{
         $CmdLetButton.Height									= $height
         $CmdLetButton.Width										= $width
