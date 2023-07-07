@@ -1,6 +1,15 @@
 @{
 
-RootModule = 'ezform.psm1'
+RootModule = "ezform.psm1"
+NestedModules = @(
+	'elements\form.psm1',
+	'elements\button.psm1',
+    	'elements\label.psm1',
+	'elements\listview.psm1',
+	'elements\picture.psm1',
+	'elements\progressbar.psm1',
+	'elements\statusbar.psm1',
+	'elements\textbox.psm1')
 ModuleVersion = '0.0.1.0'
 Author = 'archdukejim'
 Description = 'Simplifies Powershell Form Building'
@@ -10,7 +19,7 @@ VariablesToExport = '*'
 AliasesToExport = @()
 
 # CompanyName = 'Unknown'
-# Copyright = '(c) James Church. All rights reserved.'
+# Copyright = '(c) Archdukejim. All rights reserved.'
 # CompatiblePSEditions = @()
 # GUID = 'b632e90c-df3d-4340-9f6c-3b832646bf87'
 # PowerShellVersion = ''
@@ -24,14 +33,7 @@ AliasesToExport = @()
 # ScriptsToProcess = @()
 # TypesToProcess = @() # Type files (.ps1xml) to be loaded
 # FormatsToProcess = @() Format files (.ps1xml) to be loaded
-NestedModules = @('element\form.psm1',
-	'element\button.psm1',
-    'element\label.psm1',
-    'element\listview.psm1',
-    'element\picture.psm1',
-    'element\progressbar.psm1',
-    'element\statusbar.psm1',
-    'element\textbox.psm1')
+
 # DscResourcesToExport = @()
 # ModuleList = @()
 # FileList = @()
