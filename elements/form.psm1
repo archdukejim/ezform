@@ -1,5 +1,5 @@
 function New-Form{
-	[CmdletBinding(DefaultParameterSet=Noname)]
+	[CmdletBinding(DefaultParameterSetName='noname')]
     <#
     .DESCRIPTION
         Creates a powershell object to use as a form
