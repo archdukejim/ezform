@@ -57,10 +57,7 @@ function New-ListView{
 		[int32]$FontSize,
             [Parameter(Mandatory=$false, ParameterSetName='name')]
             [Parameter(Mandatory=$false, ParameterSetName='noname')]
-        [Parameter(
-            [Parameter(Mandatory=$false, ParameterSetName='name')]
-            [Parameter(Mandatory=$false, ParameterSetName='noname')]
-        [string]$anchor
+        [string]$anchor,
             [Parameter(Mandatory=$false, ParameterSetName='name')]
             [Parameter(Mandatory=$false, ParameterSetName='noname')]
 		[array]$Headers,
@@ -89,9 +86,11 @@ function New-ListView{
                 [int32]$errorsize 								= $colsize[0]
                 $colsize 										= $null
                 foreach ($header in $headers){ [array]$colsize += $errorsize }
-            } else { foreach($header in $headers){ [array]$colsize += '50' } }
-        } elseif ($headers.count -eq 1){$colsize 				= ($width - 25)
-        } else { foreach($header in $headers){ [array]$colsize 	+= '50' } }
+            } 
+            else { 
+                foreach($header in $headers){ [array]$colsize += '50' } }} 
+        elseif ($headers.count -eq 1){$colsize 				= ($width - 25)} 
+        else { foreach($header in $headers){ [array]$colsize 	+= '50' } }
         for($i=0;$i -lt $headers.count; $i++){
             $column 											= $null
             $column 											= New-Object System.Windows.Forms.ColumnHeader
@@ -121,6 +120,7 @@ function New-ListView{
     END{
         if(!$name){$CmdLetListView}
         else{New-Variable -Name $name -Scope 2 -Value $CmdLetListView}
+    }
 }
 
 ########### Version 0.1.6.0 - ListViewData CmdLets ###############
